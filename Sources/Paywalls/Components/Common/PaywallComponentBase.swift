@@ -65,45 +65,47 @@ extension PaywallComponent: Codable {
 
     // swiftlint:disable:next cyclomatic_complexity
     public func encode(to encoder: any Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        var container = encoder.unkeyedContainer()
 
         switch self {
         case .text(let component):
-            try container.encode(ComponentType.text, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .image(let component):
-            try container.encode(ComponentType.image, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .icon(let component):
-            try container.encode(ComponentType.icon, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .stack(let component):
-            try container.encode(ComponentType.stack, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .button(let component):
-            try container.encode(ComponentType.button, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .package(let component):
-            try container.encode(ComponentType.package, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .purchaseButton(let component):
-            try container.encode(ComponentType.purchaseButton, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .stickyFooter(let component):
-            try container.encode(ComponentType.stickyFooter, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .tabs(let component):
-            try container.encode(ComponentType.tabs, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .tabControl(let component):
-            try container.encode(ComponentType.tabControl, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .tabControlButton(let component):
-            try container.encode(ComponentType.tabControlButton, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         case .tabControlToggle(let component):
-            try container.encode(ComponentType.tabControlToggle, forKey: .type)
-            try component.encode(to: encoder)
+            var container = encoder.unkeyedContainer()
+            container.encode(component)
         }
     }
 
