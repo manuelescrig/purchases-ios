@@ -66,7 +66,7 @@ let package = Package(
         .testTarget(name: "ReceiptParserTests",
                     dependencies: [
                         "ReceiptParser",
-                        .product(name: "Nimble", package: "nimble")
+                        .product(name: "Nimble", package: "Nimble")
                     ],
                     exclude: ["ReceiptParserTests-Info.plist"]),
         // RevenueCatUI
@@ -80,7 +80,7 @@ let package = Package(
         .testTarget(name: "RevenueCatUITests",
                     dependencies: [
                         "RevenueCatUI",
-                        .product(name: "Nimble", package: "nimble"),
+                        .product(name: "Nimble", package: "Nimble"),
                         .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
                     ],
                     exclude: ["Templates/__Snapshots__", "Data/__Snapshots__", "TestPlans"],
