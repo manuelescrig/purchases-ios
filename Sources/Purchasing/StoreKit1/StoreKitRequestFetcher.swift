@@ -27,7 +27,7 @@ class StoreKitRequestFetcher: NSObject {
 
     private let requestFactory: ReceiptRefreshRequestFactory
     private var receiptRefreshRequest: SKRequest?
-    private var receiptRefreshCompletionHandlers: [@MainActor @Sendable () -> Void]
+    private var receiptRefreshCompletionHandlers: [@Sendable () -> Void]
     private let operationDispatcher: OperationDispatcher
 
     init(requestFactory: ReceiptRefreshRequestFactory = ReceiptRefreshRequestFactory(),
